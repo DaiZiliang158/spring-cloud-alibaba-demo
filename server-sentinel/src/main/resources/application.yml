@@ -1,0 +1,18 @@
+server:
+  port: 9999
+spring:
+  application:
+    name: server-sentinel-client
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 47.100.137.99:8848
+    sentinel:
+      transport:
+        # 注册到 sentinel后台
+        dashboard: 47.100.137.99:8718
+feign:
+  sentinel:
+    enabled: true
+  okhttp:
+    enabled: true
